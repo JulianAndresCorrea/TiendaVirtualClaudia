@@ -42,7 +42,7 @@ export default function Checkout() {
             <div>
               {it.name} × {it.qty}
             </div>
-            <div>{formatCurrency(it.price * it.qty)}</div>
+            <div>{formatCurrency(it.price * it.qty, "COP", "es-CO")}</div>
           </div>
         ))}
 
@@ -71,13 +71,12 @@ export default function Checkout() {
               <div style={{ color: "red" }}>{serverResp.error}</div>
             ) : (
               <div>
-                <div>Subtotal: {formatCurrency(serverResp.subtotal)}</div>
+                <div>Subtotal: {formatCurrency(serverResp.subtotal, "COP", "es-CO")}</div>
                 <div>
-                  Impuestos ({Math.round(serverResp.taxRate * 100)}%):{" "}
-                  {formatCurrency(serverResp.tax)}
+                  Impuestos ({Math.round(serverResp.taxRate * 100)}%): {formatCurrency(serverResp.tax, "COP", "es-CO")}
                 </div>
-                <div>Envío: {formatCurrency(serverResp.shipping)}</div>
-                <h3>Total: {formatCurrency(serverResp.total)}</h3>
+                <div>Envío: {formatCurrency(serverResp.shipping, "COP", "es-CO")}</div>
+                <h3>Total: {formatCurrency(serverResp.total, "COP", "es-CO")}</h3>
               </div>
             )}
           </div>

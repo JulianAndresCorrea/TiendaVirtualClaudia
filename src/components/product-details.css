@@ -73,7 +73,7 @@
 }
 .pd-price {
   font-size: 20px;
-  color: var(--accent);
+  color: var(--text-h);
   font-weight: 700;
 }
 .pd-desc {

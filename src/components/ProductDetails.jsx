@@ -3,6 +3,7 @@ import imgLogo from "../assets/images/Logo_Claudia.png";
 import imgReact from "../assets/images/react.svg";
 import imgVite from "../assets/images/vite.svg";
 import "./product-details.css";
+import { formatCurrency } from "../utils/format";
 
 const IMAGES = {
   "Logo_Claudia.png": imgLogo,
@@ -59,9 +60,7 @@ export default function ProductDetails({ product, onClose }) {
             </div>
           </div>
           <div className="pd-info">
-            <p className="pd-price">
-              {product.currency} {product.price.toFixed(2)}
-            </p>
+            <p className="pd-price">{formatCurrency(product.price, "COP", "es-CO")}</p>
             <p className="pd-desc">{product.description}</p>
             {/* extra metadata could go here */}
           </div>

@@ -17,8 +17,8 @@
   font-size: 14px;
 }
 .product-card .price {
-  color: var(--accent);
-  font-weight: 600;
+  color: var(--text-h); /* darker price color for readability */
+  font-weight: 700;
 }
 .product-card .actions {
   margin-top: auto;

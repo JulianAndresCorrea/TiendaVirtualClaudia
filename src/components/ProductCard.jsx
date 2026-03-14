@@ -4,6 +4,7 @@ import imgLogo from "../assets/images/Logo_Claudia.png";
 import imgReact from "../assets/images/react.svg";
 import imgVite from "../assets/images/vite.svg";
 import { useCart } from "../context/CartContext";
+import { formatCurrency } from "../utils/format";
 import ProductDetails from "./ProductDetails";
 
 const IMAGES = {
@@ -28,7 +29,7 @@ export default function ProductCard({ product }) {
       <h3 id={`p-${product.id}`}>{product.name}</h3>
       <p className="desc">{product.description}</p>
       <div className="price">
-        {product.currency} {product.price.toFixed(2)}
+        {formatCurrency(product.price, "COP", "es-CO")}
       </div>
       <div className="actions">
         <button className="buy" onClick={() => addItem(product, 1)}>
