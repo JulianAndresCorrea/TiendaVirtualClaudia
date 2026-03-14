@@ -4,6 +4,14 @@
   border: none;
   color: rgba(17, 24, 39, 0.9); /* darker icon color */
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 9999px; /* circular */
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
 .cart-count {
   position: absolute;
@@ -59,6 +67,11 @@
 .cart-button svg {
   width: 30px;
   height: 30px;
+}
+.cart-button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 28px rgba(2,6,23,0.14);
+  background: rgba(255,255,255,0.04);
 }
 .cart-count {
   font-size: 12px;
