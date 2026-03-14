@@ -59,6 +59,9 @@
   padding: 12px;
   border-radius: 8px;
   text-align: left;
+  background: var(--card-bg, var(--bg));
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.04);
 }
 .product-thumb {
   background: var(--code-bg);
@@ -67,8 +70,15 @@
   margin-bottom: 12px;
 }
 .price {
-  color: var(--accent);
+  color: var(--text-h);
   margin: 8px 0;
+  font-weight: 700;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(2,6,23,0.08);
+  border-color: rgba(0,0,0,0.06);
 }
 .buy {
   background: transparent;
