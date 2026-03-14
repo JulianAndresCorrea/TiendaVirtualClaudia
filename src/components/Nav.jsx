@@ -102,13 +102,29 @@ export default function Nav() {
           onClick={() => setOpen((v) => !v)}
         >
           <span className="sr-only">Menú</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </button>
 
         <nav className={`menu ${open ? "open" : ""}`}>
-          <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")} onClick={() => setOpen(false)}>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "")}
+            onClick={() => setOpen(false)}
+          >
             Inicio
           </NavLink>
           <NavLink

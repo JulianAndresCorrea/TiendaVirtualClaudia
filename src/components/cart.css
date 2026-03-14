@@ -68,9 +68,20 @@
 }
 
 @media (max-width: 520px) {
-  .cart-modal { width: 96%; max-width: 480px; padding: 12px; border-radius: 8px; }
-  .cart-thumb img { width: 56px; height: 56px; }
-  .cart-count { top: -4px; right: -4px; }
+  .cart-modal {
+    width: 96%;
+    max-width: 480px;
+    padding: 12px;
+    border-radius: 8px;
+  }
+  .cart-thumb img {
+    width: 56px;
+    height: 56px;
+  }
+  .cart-count {
+    top: -4px;
+    right: -4px;
+  }
 }
 /* increase svg icon size inside cart button */
 .cart-button svg {
