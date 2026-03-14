@@ -44,6 +44,17 @@
   color: var(--text);
   text-decoration: none;
 }
+.menu a {
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+.menu a:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.08);
+  background: rgba(0, 0, 0, 0.03);
+}
 .menu .active {
   color: var(--accent);
   text-decoration: underline;
