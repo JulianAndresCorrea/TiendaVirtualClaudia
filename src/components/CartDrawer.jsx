@@ -38,7 +38,7 @@ function CartItemRow({ item, onRemove, onUpdate }) {
       </div>
       <div className="cart-actions">
         <button
-          className="btn"
+          className="btn qty-btn"
           onClick={() => onUpdate(item.productId, Math.max(1, item.qty - 1))}
           aria-label="Disminuir"
         >
@@ -46,7 +46,7 @@ function CartItemRow({ item, onRemove, onUpdate }) {
         </button>
         <span>{item.qty}</span>
         <button
-          className="btn"
+          className="btn qty-btn"
           onClick={() => onUpdate(item.productId, item.qty + 1)}
           aria-label="Aumentar"
         >
