@@ -89,7 +89,9 @@ export default function Nav() {
     <header className="tv-nav">
       <div className="tv-container">
         <div className="brand">
-          <img src={logo} alt="Logo Tienda" className="tv-logo" />
+          <NavLink to="/" aria-label="Ir al inicio" className="brand-link">
+            <img src={logo} alt="Logo Tienda" className="tv-logo" />
+          </NavLink>
         </div>
         <nav className="menu">
           <NavLink

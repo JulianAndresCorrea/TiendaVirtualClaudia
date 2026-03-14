@@ -28,6 +28,17 @@
   height: auto;
   display: block;
 }
+.brand-link {
+  display: inline-block;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.brand-link:hover {
+  transform: scale(1.04);
+}
+.brand-link:active {
+  transform: scale(0.995);
+}
+.brand-link img { cursor: pointer; }
 .menu a {
   margin-left: 16px;
   color: var(--text);
