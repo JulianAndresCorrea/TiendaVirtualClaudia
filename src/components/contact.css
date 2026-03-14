@@ -22,6 +22,17 @@
 .contact-form .form-actions {
   text-align: right;
 }
+/* make submit button match 'Pagar' green */
+.contact-form .btn {
+  background: #10b981;
+  border: 1px solid #059669;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  filter: brightness(0.92);
+}
+.contact-form .btn:hover { filter: brightness(1); }
 .form-status {
   margin-top: 8px;
   padding: 8px;
