@@ -32,7 +32,9 @@
   cursor: pointer;
   filter: brightness(0.92);
 }
-.contact-form .btn:hover { filter: brightness(1); }
+.contact-form .btn:hover {
+  filter: brightness(1);
+}
 .form-status {
   margin-top: 8px;
   padding: 8px;

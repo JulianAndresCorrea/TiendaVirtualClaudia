@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./nav.css";
 import logo from "../assets/images/Logo_Claudia.png";
 import { NavLink } from "react-router-dom";
@@ -32,6 +32,7 @@ function mixWithColor([r, g, b], color = [0, 120, 255], amount = 0.3) {
 }
 
 export default function Nav() {
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     const img = new Image();
     img.crossOrigin = "anonymous";
@@ -93,28 +94,41 @@ export default function Nav() {
             <img src={logo} alt="Logo Tienda" className="tv-logo" />
           </NavLink>
         </div>
-        <nav className="menu">
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
+        {/* hamburger toggle for small screens */}
+        <button
+          className="nav-toggle"
+          aria-label="Abrir menú"
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span className="sr-only">Menú</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+
+        <nav className={`menu ${open ? "open" : ""}`}>
+          <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")} onClick={() => setOpen(false)}>
             Inicio
           </NavLink>
           <NavLink
             to="/productos"
             className={({ isActive }) => (isActive ? "active" : "")}
+            onClick={() => setOpen(false)}
           >
             Productos
           </NavLink>
           <NavLink
             to="/ofertas"
             className={({ isActive }) => (isActive ? "active" : "")}
+            onClick={() => setOpen(false)}
           >
             Ofertas
           </NavLink>
           <NavLink
             to="/contactos"
             className={({ isActive }) => (isActive ? "active" : "")}
+            onClick={() => setOpen(false)}
           >
             Contacto
           </NavLink>

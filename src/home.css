@@ -44,9 +44,15 @@
 }
 .tv-products .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
   margin-top: 16px;
+}
+
+@media (max-width: 820px) {
+  .tv-main { padding: 16px 12px; }
+  .tv-banner-image img { width: 140px; }
+  .tv-products .grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
 }
 .product-card {
   border: 1px solid var(--border);

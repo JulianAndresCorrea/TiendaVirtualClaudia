@@ -54,6 +54,12 @@
   font: inherit;
 }
 
+@media (max-width: 720px) {
+  .product-card { padding: 10px; }
+  .product-thumb img { height: 100px; }
+  .product-placeholder { height: 100px; font-size: 28px; }
+}
+
 .buy {
   background: var(--btn-buy, var(--accent));
   border: 1px solid var(--btn-buy-border, rgba(0, 0, 0, 0.12));

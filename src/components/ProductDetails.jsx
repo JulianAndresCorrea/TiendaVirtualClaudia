@@ -60,7 +60,9 @@ export default function ProductDetails({ product, onClose }) {
             </div>
           </div>
           <div className="pd-info">
-            <p className="pd-price">{formatCurrency(product.price, "COP", "es-CO")}</p>
+            <p className="pd-price">
+              {formatCurrency(product.price, "COP", "es-CO")}
+            </p>
             <p className="pd-desc">{product.description}</p>
             {/* extra metadata could go here */}
           </div>
