@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Camiseta Claudia",
+    "price": 19.99,
+    "currency": "USD",
+    "onSale": false,
+    "image": "Logo_Claudia.png",
+    "images": ["Logo_Claudia.png", "react.svg", "vite.svg"],
+    "description": "Camiseta cómoda de algodón"
+  },
+  {
+    "id": 2,
+    "name": "Sudadera Verde",
+    "price": 39.99,
+    "currency": "USD",
+    "onSale": true,
+    "image": "react.svg",
+    "images": ["react.svg", "Logo_Claudia.png"],
+    "description": "Sudadera con capucha, edición limitada"
+  },
+  {
+    "id": 3,
+    "name": "Taza de Cerámica",
+    "price": 9.5,
+    "currency": "USD",
+    "onSale": false,
+    "image": "vite.svg",
+    "images": ["vite.svg", "Logo_Claudia.png"],
+    "description": "Taza para café con logo"
+  },
+  {
+    "id": 4,
+    "name": "Bolso Ecológico",
+    "price": 14.0,
+    "currency": "USD",
+    "onSale": true,
+    "image": "Logo_Claudia.png",
+    "images": ["Logo_Claudia.png", "react.svg"],
+    "description": "Bolso reutilizable, resistente"
+  }
+]

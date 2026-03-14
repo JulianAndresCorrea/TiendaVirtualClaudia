@@ -1,0 +1,83 @@
+.product-card {
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.product-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-h);
+}
+.product-card .desc {
+  color: var(--text);
+  font-size: 14px;
+}
+.product-card .price {
+  color: var(--accent);
+  font-weight: 600;
+}
+.product-card .actions {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+}
+.product-thumb img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.product-placeholder {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 36px;
+  border-radius: 6px;
+}
+.buy,
+.details,
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font: inherit;
+}
+
+.buy {
+  background: var(--btn-buy, var(--accent));
+  border: 1px solid var(--btn-buy-border, rgba(0, 0, 0, 0.12));
+}
+.buy:hover {
+  filter: brightness(0.92);
+}
+
+.details {
+  background: var(--btn-details, var(--btn-primary, #3b82f6));
+  border: 1px solid var(--btn-details-border, rgba(59, 130, 246, 0.35));
+}
+.details:hover {
+  filter: brightness(0.95);
+}
+
+/* Slightly darker buttons by default for better contrast; hover restores brightness */
+.buy,
+.details,
+.btn {
+  filter: brightness(0.92);
+}
+.buy:hover,
+.details:hover,
+.btn:hover {
+  filter: brightness(1);
+}

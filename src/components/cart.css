@@ -1,0 +1,210 @@
+.cart-button {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: rgba(17, 24, 39, 0.9); /* darker icon color */
+  cursor: pointer;
+}
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--accent);
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 12px;
+}
+
+.cart-button.bump {
+  animation: cart-bump 350ms ease-out;
+}
+@keyframes cart-bump {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.15);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cart-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.cart-modal {
+  width: 92%;
+  max-width: 720px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 10px;
+  max-height: 90vh;
+  overflow: hidden;
+}
+/* increase svg icon size inside cart button */
+.cart-button svg {
+  width: 30px;
+  height: 30px;
+}
+.cart-count {
+  font-size: 12px;
+  padding: 3px 7px;
+}
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-list {
+  flex: 1;
+  overflow: auto;
+  padding: 8px 0;
+}
+.cart-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.cart-thumb img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.cart-info {
+  flex: 1;
+  text-align: left;
+}
+.cart-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.cart-actions button {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+}
+.cart-actions .remove {
+  color: #b91c1c;
+  border: none;
+  background: transparent;
+}
+.cart-subtotal {
+  font-size: 13px;
+  color: var(--text);
+  margin-top: 4px;
+}
+.cart-footer {
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.cart-footer .btn,
+.cart-footer button.btn {
+  background: var(--btn-primary, var(--accent));
+  color: white;
+  border: 1px solid var(--btn-primary-border, var(--accent-border));
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.cart-footer .btn,
+.cart-footer button.btn {
+  filter: brightness(0.92);
+}
+.cart-footer .btn:hover,
+.cart-footer button.btn:hover {
+  filter: brightness(1);
+}
+
+.empty {
+  padding: 24px;
+  color: var(--text);
+}
+
+/* Toast */
+.cart-toast {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  background: var(--btn-primary, var(--accent));
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  z-index: 3000;
+  filter: brightness(0.92);
+}
+
+/* semantic button variants */
+.btn--danger {
+  background: #ef4444;
+  border-color: #dc2626;
+}
+.btn--danger:hover {
+  filter: brightness(1);
+}
+
+.btn--success {
+  background: #10b981;
+  border-color: #059669;
+}
+.btn--success:hover {
+  filter: brightness(1);
+}
+
+.btn--warn {
+  background: var(--btn-details, var(--btn-primary, #3b82f6));
+  border-color: var(--btn-details-border, rgba(59, 130, 246, 0.35));
+  color: white;
+}
+.btn--warn:hover {
+  filter: brightness(1);
+}
+
+/* ensure semantic variants win inside footer and spacing between buttons */
+.cart-footer-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.cart-footer .btn.btn--success,
+.cart-footer button.btn.btn--success {
+  background: #10b981;
+  border-color: #059669;
+  color: white;
+}
+.cart-footer .btn.btn--warn,
+.cart-footer button.btn.btn--warn {
+  background: var(--btn-details, var(--btn-primary, #3b82f6));
+  border-color: var(--btn-details-border, rgba(59, 130, 246, 0.35));
+  color: white;
+}
+.cart-footer .btn.btn--danger,
+.cart-footer button.btn.btn--danger {
+  background: #ef4444;
+  border-color: #dc2626;
+  color: white;
+}
